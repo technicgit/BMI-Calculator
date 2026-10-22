@@ -1,6 +1,6 @@
-# BMI Calculator
+BMI Calculator
 
-A simple Java console program created as a Day 3 exercise for a QA Automation Bootcamp. It accepts weight in pounds and height in meters, calculates Body Mass Index (BMI), and displays a category using conditional statements.
+A Java console application that calculates Body Mass Index (BMI) from weight in pounds and height in meters, then displays the corresponding category.
 
 ## Features
 
@@ -29,7 +29,7 @@ The program uses the following conditions and output messages:
 
 Each `else if` is checked only when the previous condition is false. This allows the code to check the upper limit of each range without repeating its lower limit.
 
-## Java Concepts Practiced
+## Implementation Details
 
 - Variables and the `double` data type.
 - User input with `Scanner` and `nextDouble()`.
@@ -39,17 +39,18 @@ Each `else if` is checked only when the previous condition is false. This allows
 - Console output with `System.out.println()`.
 - Closing the scanner after collecting input.
 
-## How to Run in Eclipse
+## How to Run
 
-You need a Java Development Kit (JDK) configured in Eclipse IDE for Java Developers. No external libraries are required.
+Requires a Java Development Kit (JDK), with `java` and `javac` available in your terminal. No external libraries are required.
 
-1. Open your Java project in Eclipse.
-2. Create a package named `day3` under the source folder if it does not already exist.
-3. Save the source code in that package as `BMICalculator.java`. The file must begin with `package day3;`.
-4. Right-click `BMICalculator.java` and select **Run As > Java Application**.
-5. Enter your weight in pounds and press Enter.
-6. Enter your height in meters and press Enter.
-7. Read the BMI value and category in the Console.
+From the directory containing `BMICalculator.java`, compile and run:
+
+```sh
+javac -d out BMICalculator.java
+java -cp out day3.BMICalculator
+```
+
+The run command uses the package declared in the source file. Enter weight in pounds and height in meters when prompted, pressing Enter after each value. The program then displays the BMI and category.
 
 ## Suggested Manual Checks
 
@@ -68,4 +69,4 @@ These are expected results to check when running the program. BMI values in this
 - Does not validate that weight and height are positive. Zero or negative inputs can produce invalid or misleading results.
 - Expects numeric input. Text input causes an input mismatch exception.
 - Prints BMI without a fixed number of decimal places.
-- Applies the same category rules to every input without asking for age or other context. This project is a programming exercise.
+- Applies the same category rules to every input without asking for age or other context.
